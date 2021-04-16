@@ -1,4 +1,4 @@
-pachage entities
+package entities
 
 type HashTag struct {
     Id     int64
