@@ -1,6 +1,7 @@
 # python 默认编码为unicode
 #这里匹配的是俄语字符所有unicode码
 import re
+from IPython import embed
 russian_word = re.compile(u'[\u0411-\u04ff]+')
 with open(r"source/source.txt") as file:
     words={}
@@ -8,6 +9,7 @@ with open(r"source/source.txt") as file:
     flag = True
     while flag:
         line = file.readline()
+        embed()
         # check if endwith \n 
         if line.endswith("\n"):
             flag = True
